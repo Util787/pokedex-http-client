@@ -40,7 +40,7 @@ func commandExplore(a *config, cch *pokecache.Cache, areaname string) error {
 			return err
 		}
 
-		js, err = io.ReadAll(resp.Body) // if you write := here you'll get pokemons wrong
+		js, err = io.ReadAll(resp.Body) // if you write := here you'll get pokemons wrong because of shadowing
 		if err != nil {
 			return err
 		}
