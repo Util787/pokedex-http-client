@@ -62,19 +62,4 @@ func (c *Cache) reapLoop() {
 	}
 }
 
-// func (c *Cache) reapLoop() {
-// 	ticker := time.NewTicker(c.ttl)
-// 	defer ticker.Stop()
 
-// 	for {
-// 		<-ticker.C
-// 		c.cachmutex.Lock()
-// 		for key, val := range c.cachemap {
-// 			if time.Since(val.createdAt) >= c.ttl {
-// 				delete(c.cachemap, key)
-// log.Println("CacheEntry deleted for key:", key)
-// 			}
-// 		}
-// 		c.cachmutex.Unlock()
-// 	}
-// }
